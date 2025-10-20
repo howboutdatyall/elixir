@@ -132,7 +132,7 @@ jobs:
           name: build-${{ matrix.flavor }}-elixir-otp-${{ matrix.otp }}
 
       - name: "Sign files with Trusted Signing"
-        uses: azure/trusted-signing-action@0d74250c661747df006298d0fb49944c10f16e03 # v0.5.1
+        uses: azure/trusted-signing-action@fc390cf8ed0f14e248a542af1d838388a47c7a7c # v0.5.10
         if: github.repository == 'elixir-lang/elixir' && matrix.flavor == 'windows'
         with:
           azure-tenant-id: ${{ secrets.AZURE_TENANT_ID }}
